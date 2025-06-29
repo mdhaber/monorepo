@@ -1,30 +1,55 @@
 name: documentation
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read         # for checkout
+  pages: write           # needed by deploy-pages
+  id-token: write        # needed by configure-pages
 
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-      - uses: prefix-dev/setup-pixi@v0.8.10
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Set up Pixi
+        uses: prefix-dev/setup-pixi@v0.8.10
         with:
           pixi-version: v0.44.0
-      - name: Set up environment
+
+      - name: Install dependencies
         run: |
           pixi install
-      - name: Sphinx build
+
+      - name: Build documentation
         run: |
           pixi run sphinx-build docs _build
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+
+      # Only on pushes to main: upload the built HTML
+      - name: Upload Pages artifact
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        uses: actions/upload-pages-artifact@v1
         with:
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/
-          force_orphan: true
+          path: _build
+
+      # Configure the Pages site (branch, folder, etc.)
+      - name: Configure GitHub Pages
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        uses: actions/configure-pages@v2
+
+      # Deploy the uploaded artifact to the gh-pages branch
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        uses: actions/deploy-pages@v1
