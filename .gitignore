@@ -2,3 +2,7 @@
 # pixi environments
 .pixi
 *.egg-info
+
+# documentation
+docs_build
+docs/generated

@@ -10,7 +10,7 @@ version = "0.1.0"
 
 [tasks.docs]
 description = "Build the Sphinx documentation"
-cmd = "sphinx-build -b html -E docs_source/ docs/"
+cmd = "sphinx-build -b html -E docs/ docs_build/"
 
 [dependencies]
 pre-commit = ">=4.2.0,<5"
