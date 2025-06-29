@@ -5,7 +5,7 @@
 
 Monorepo documentation
 
-This is the public documentation on gh-pages.
+This is documentation in a PR.
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
