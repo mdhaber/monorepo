@@ -17,6 +17,12 @@ def sin(x):
     -------
     float
         The ``sin`` of x.
+
+    Examples
+    --------
+    >>> import package1
+    >>> package1.sin(0)
+    np.float64(0.0)
     """
     return np.sin(x)
 
