@@ -11,12 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-      - name: Install pixi
-        run: |
-          pip install pixi
-      - name: Install environment
-        run: |
-          pixi install
+      - uses: prefix-dev/setup-pixi@v0.8.10
+        with:
+          pixi-version: v0.44.0
       - name: Sphinx build
         run: |
           sphinx-build doc _build
