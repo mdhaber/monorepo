@@ -15,8 +15,8 @@ permissions:
 jobs:
   docs:
     environment:
-        name: github-pages
-        url: ${{ steps.deploy-pages.outputs.page_url }}
+      name: ${{ github.event_name == 'pull_request' && 'github-pages-preview' || 'github-pages' }}
+      url:  ${{ steps.deploy-pages.outputs.page_url }}
         
     runs-on: ubuntu-latest
     steps:
