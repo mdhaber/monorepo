@@ -8,6 +8,10 @@ version = "0.1.0"
 [tasks]
 # This is one of the benefits of pixi? no need for `spin` or `dev.py`?
 
+[tasks.docs]
+description = "Build the Sphinx documentation"
+cmd = "sphinx-build -b html -E docs_source/ docs/"
+
 [dependencies]
 pre-commit = ">=4.2.0,<5"
 ruff = ">=0.12.1,<0.13"
