@@ -1,0 +1,22 @@
+[build-system]
+requires = ["pixi"]
+build-backend = "pixi.build_meta"
+
+[workspace]
+name = "monorepo"
+version = "0.1.0"
+authors = ["Your Name <youremail@example.com>"]
+platforms = ["win-64"]
+channels = ["conda-forge"]
+
+[dependencies]
+# This section remains empty since the runtime dependencies will be handled by each package.
+
+
+# I'm a bit confused about how to best specify dependencies.
+# I want to specify developer dependencies in `pixi.toml` in the main project.
+# I want each package's `pyproject.toml` to specify run-time dependencies specific to
+# the package, but `pixi` doesn't pick those up when running `pixi install` at the top
+# level. Looks like monorepos w/ pixi is still under development:
+# https://github.com/prefix-dev/pixi/discussions/387
+

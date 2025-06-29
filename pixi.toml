@@ -6,8 +6,20 @@ platforms = ["win-64"]
 version = "0.1.0"
 
 [tasks]
+# This is one of the benefits of pixi? no need for `spin` or `dev.py`?
 
 [dependencies]
 pre-commit = ">=4.2.0,<5"
 ruff = ">=0.12.1,<0.13"
 mypy = ">=1.16.1,<2"
+pytest = ">=8.4.1,<9"
+sphinx = ">=8.2.3,<9"
+pydata-sphinx-theme = ">=0.16.0,<1.0"
+numpydoc = ">=1.8.0,<2.0"
+
+# Runtime dependencies for package1
+numpy = ">=2.0, <3.0"
+
+[pypi-dependencies]
+package1 = { path = "./package1/", editable = true }
+package2 = { path = "./package2/", editable = true }
