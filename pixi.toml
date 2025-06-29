@@ -2,7 +2,7 @@
 authors = ["Matt Haberland <mhaberla@calpoly.edu>"]
 channels = ["conda-forge"]
 name = "monorepo"
-platforms = ["win-64"]
+platforms = ["win-64", "linux-64", "osx-64"]
 version = "0.1.0"
 
 [tasks]
@@ -13,6 +13,7 @@ description = "Build the Sphinx documentation"
 cmd = "sphinx-build -b html -E docs/ docs_build/"
 
 [dependencies]
+python = ">=3.10,<4.0"
 pre-commit = ">=4.2.0,<5"
 ruff = ">=0.12.1,<0.13"
 mypy = ">=1.16.1,<2"
