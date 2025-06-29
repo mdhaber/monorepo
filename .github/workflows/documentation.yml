@@ -16,7 +16,7 @@ jobs:
   docs:
     environment:
       # this can be simpler if we don't need to preview docs on PRs
-      name: ${{ github.event_name == 'pull_request' && 'github-pages-preview' || 'github-pages' }}
+      name: ${{ github.event_name == 'push' && 'github-pages' || '' }}
       url:  ${{ github.event_name == 'push' && steps.deploy-pages.outputs.page_url }}
         
     runs-on: ubuntu-latest
@@ -51,6 +51,7 @@ jobs:
         if: github.event_name == 'pull_request'
         uses: rossjrw/pr-preview-action@v1.6.1
         with:
+          token: ${{ secrets.PREVIEW_TOKEN }}
           source-dir: ./_build
           preview-branch: gh-pages
           umbrella-dir: pr-preview
