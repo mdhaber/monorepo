@@ -6,7 +6,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "monorepo_package1"
 version = "0.1.0"
-authors = [{ name = "Matt Haberland", email = "mhaberla@calpoly.edu" }]
+authors = [{ name = "Matt Haberland", email = "matt.haberland@gmail.com" }]
 description = "Short description here"
 license = { text = "MIT" }
 requires-python = ">=3.10"

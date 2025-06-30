@@ -2924,6 +2924,18 @@ packages:
   purls: []
   size: 103106385
   timestamp: 1730232843711
+- pypi: ./package1
+  name: monorepo-package1
+  version: 0.1.0
+  sha256: 03fd4c3444054fd3888f00a21179ad4105a33cce039ccd254712e4963a26ee0f
+  requires_python: '>=3.10'
+  editable: true
+- pypi: ./package2
+  name: monorepo-package2
+  version: 0.1.0
+  sha256: 237c31bac685c85ce7e3bad605b2a061d57eef554be73aef5d343ec9f9b03125
+  requires_python: '>=3.10'
+  editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/more-itertools-10.7.0-pyhd8ed1ab_0.conda
   sha256: d0c2253dcb1da6c235797b57d29de688dabc2e48cc49645b1cff2b52b7907428
   md5: 7c65a443d58beb0518c35b26c70e201d
@@ -3234,18 +3246,6 @@ packages:
   - pkg:pypi/overrides?source=hash-mapping
   size: 30139
   timestamp: 1734587755455
-- pypi: ./package1
-  name: package1
-  version: 0.1.0
-  sha256: 2dd35268f2c1e18e850dcdd426f2e6e03b9b469d8c17dc993ec104af5113d4b6
-  requires_python: '>=3.10'
-  editable: true
-- pypi: ./package2
-  name: package2
-  version: 0.1.0
-  sha256: ee1b76c75fa1cae431405b1b147281b8a9ad157484ace185cedca5efec0672f9
-  requires_python: '>=3.10'
-  editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
   sha256: 289861ed0c13a15d7bbb408796af4de72c2fe67e2bcb0de98f4c3fce259d7991
   md5: 58335b26c38bf4a20f399384c33cbcf9
