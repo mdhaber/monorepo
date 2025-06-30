@@ -10,11 +10,11 @@ version = "0.1.0"
 
 [tasks.build_docs]
 description = "Build the Sphinx documentation"
-cmd = "sphinx-build -b html -E docs/ docs_build/"
+cmd = "sphinx-build -b html -E docs/ docs/_build/"
 
 [tasks.serve_docs]
 description = "Run the documentation server"
-cmd = "python -m http.server --directory docs_build"
+cmd = "python -m http.server --directory docs/_build"
 
 [dependencies]
 python = ">=3.10,<4.0"
