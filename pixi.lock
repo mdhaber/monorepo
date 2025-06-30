@@ -3159,7 +3159,7 @@ packages:
 - pypi: ./package1
   name: monorepo-package1
   version: 0.1.0
-  sha256: 03fd4c3444054fd3888f00a21179ad4105a33cce039ccd254712e4963a26ee0f
+  sha256: 271a9d9a3f5ded7e78f81d52e7c4d0c9291e6f7db95fdaaeb479c37562a1453d
   requires_python: '>=3.10'
   editable: true
 - pypi: ./package2
