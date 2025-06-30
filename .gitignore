@@ -7,3 +7,6 @@
 docs_build
 docs/generated
 .DS_Store
+
+# packaging
+package1/dist/

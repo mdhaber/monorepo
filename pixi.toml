@@ -33,6 +33,7 @@ jupytext = ">=1.17, <2.0"
 # Runtime dependencies for package1
 numpy = ">=2.0, <3.0"
 flit = ">=3.11.0,<4"
+keyring = ">=25.6.0,<26"
 
 [pypi-dependencies]
 package1 = { path = "./package1/", editable = true }
