@@ -6,3 +6,4 @@
 # documentation
 docs_build
 docs/generated
+.DS_Store
