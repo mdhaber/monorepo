@@ -24,7 +24,10 @@ extensions = [
     "numpydoc",
     "sphinx.ext.autodoc",  # Add autodoc for auto-generated API docs
     "sphinx.ext.autosummary",  # Optional, automatically generates summary tables for modules, classes, functions
+    "sphinx.ext.viewcode",
+    "sphinx.ext.mathjax",
     "jupyterlite_sphinx",
+    "myst_parser",
 ]
 
 templates_path = ["_templates"]

@@ -18,6 +18,7 @@ documentation for details.
    
    package1
    package2
+   markdown
 
 We have a tutorial on ``package1``:
    
