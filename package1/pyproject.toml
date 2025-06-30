@@ -18,3 +18,19 @@ requires-python = ">=3.10"
 
 [tool.flit.module]
 name = "package1"
+
+
+[tool.semantic_release]
+version_variable = "package1/__init__.py:__version__"
+version_source = "tag"
+branch = "main"
+upload_to_pypi = false  # Set to true for real releases
+build_command = "flit build"
+
+
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+
+
+[tool.flit.publish]
+repository = "https://test.pypi.org/legacy/"
