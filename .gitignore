@@ -4,5 +4,6 @@
 *.egg-info
 
 # documentation
-docs_build
+docs/_build
 docs/generated
+docs/.jupyterlite.doit.db
