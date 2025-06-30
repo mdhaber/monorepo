@@ -27,11 +27,14 @@ branch = "main"
 upload_to_pypi = false  # Set to true for real releases
 build_command = "flit build"
 tag_format = "package1-v{version}"
+upload_to_release = false
 
 
-[tool.semantic_release.changelog]
+[tool.semantic_release.changelog.default_templates]
 changelog_file = "CHANGELOG.md"
 
+[tool.semantic_release.logging]
+level = "DEBUG"
 
 [tool.flit.publish]
 repository = "https://test.pypi.org/legacy/"
