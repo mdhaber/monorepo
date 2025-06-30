@@ -24,6 +24,7 @@ extensions = [
     "numpydoc",
     "sphinx.ext.autodoc",  # Add autodoc for auto-generated API docs
     "sphinx.ext.autosummary",  # Optional, automatically generates summary tables for modules, classes, functions
+    "jupyterlite_sphinx",
 ]
 
 templates_path = ["_templates"]
@@ -33,3 +34,4 @@ templates_path = ["_templates"]
 
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
+global_enable_try_examples = True

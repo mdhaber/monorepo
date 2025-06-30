@@ -5,7 +5,7 @@
 
 Monorepo documentation
 
-This is the public documentation on gh-pages (published via GH-actions).
+This is the public documentation.
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
@@ -19,9 +19,11 @@ documentation for details.
    package1
    package2
 
-We have a tutorial on `package1`:
-
-.. raw:: html
-
-   <a href="./_static/Qiskit.ipynb" class="btn btn-primary">Open `package1` Tutorial</a>
+We have a tutorial on ``package1``:
    
+.. jupyterlite:: ./_static/test.md
+   :width: 100%
+   :height: 600px
+   :prompt: Try JupyterLite!
+   :prompt_color: #00aa42
+   :new_tab: True

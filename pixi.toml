@@ -8,9 +8,13 @@ version = "0.1.0"
 [tasks]
 # This is one of the benefits of pixi? no need for `spin` or `dev.py`?
 
-[tasks.docs]
+[tasks.build_docs]
 description = "Build the Sphinx documentation"
 cmd = "sphinx-build -b html -E docs/ docs_build/"
+
+[tasks.serve_docs]
+description = "Run the documentation server"
+cmd = "python -m http.server --directory docs_build"
 
 [dependencies]
 python = ">=3.10,<4.0"
@@ -21,6 +25,10 @@ pytest = ">=8.4.1,<9"
 sphinx = ">=8.2.3,<9"
 pydata-sphinx-theme = ">=0.16.0,<1.0"
 numpydoc = ">=1.8.0,<2.0"
+jupyterlite-sphinx = ">=0.20, <1.0"
+jupyterlite-pyodide-kernel = ">=0.6, <1.0"
+jupyterlab = ">=4.0, <5.0"
+jupytext = ">=1.17, <2.0"
 
 # Runtime dependencies for package1
 numpy = ">=2.0, <3.0"
