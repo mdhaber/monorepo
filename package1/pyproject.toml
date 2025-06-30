@@ -21,7 +21,7 @@ name = "package1"
 
 
 [tool.semantic_release]
-version_variable = "package1/__init__.py:__version__"
+version_variable = "src/package1/__init__.py:__version__"
 version_source = "tag"
 branch = "main"
 upload_to_pypi = false  # Set to true for real releases
