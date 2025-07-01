@@ -12,3 +12,4 @@ docs/.jupyterlite.doit.db
 # packaging
 package1/dist/
 package2/dist/
+__pycache__
