@@ -2,6 +2,22 @@
 
 <!-- version list -->
 
+## v1.0.0 (2025-06-30)
+
+### Package1-Feat
+
+- Something added
+  ([`0ade21f`](https://github.com/mdhaber/monorepo/commit/0ade21fab0ba9ad59bf9067e7e7bd3aa7b76a6d4))
+
+- Something broke
+  ([`6dc3e47`](https://github.com/mdhaber/monorepo/commit/6dc3e4760efb949f4b4b88eef89231ba8b45b7c3))
+
+### Package1-Fix
+
+- Something fixed
+  ([`b17dfd8`](https://github.com/mdhaber/monorepo/commit/b17dfd80c029664df4904b834914cb2a6873bd4c))
+
+
 ## v0.1.2 (2025-06-30)
 
 ### Bug Fixes
