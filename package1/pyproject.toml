@@ -97,7 +97,8 @@ default = "semantic-release <semantic-release>"
 
 [tool.semantic_release.commit_parser_options]
 minor_tags = ["package1-feat"]
-patch_tags = ["package1-fix", "package1-perf"]
+patch_tags = ["package1-fix", "package1-perf"]+
+allowed_tags = ["package1-feat", "package1-fix", "package1-perf"]
 default_bump_level = 0
 parse_squash_commits = true
 ignore_merge_commits = true
