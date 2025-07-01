@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "monorepo_package2"
-version = "0.0.0"
+version = "1.0.0"
 authors = [{ name = "Matt Haberland", email = "matt.haberland@gmail.com" }]
 description = "Short description here"
 license = { text = "MIT" }
@@ -14,7 +14,7 @@ requires-python = ">=3.10"
 
 [dependencies]
 # Runtime dependencies for package2
-
+numpy = ">=2.0, <3"
 
 [tool.flit.module]
 name = "package2"
@@ -96,10 +96,8 @@ env = "GIT_COMMIT_AUTHOR"
 default = "semantic-release <semantic-release>"
 
 [tool.semantic_release.commit_parser_options]
-minor_tags = ["feat(package2)"]
-patch_tags = ["fix(package2)", "perf(package2)"]
-other_allowed_tags = ["build(package2)", "chore(package2)", "ci(package2)", "docs(package2)", "style(package2)", "refactor(package2)", "test(package2)"]
-allowed_tags = ["feat(package2)", "fix(package2)", "perf(package2)", "build(package2)", "chore(package2)", "ci(package2)", "docs(package2)", "style(package2)", "refactor(package2)", "test(package2)"]
+minor_tags = ['package2-feat']
+allowed_tags = ['package2-feat']
 default_bump_level = 0
 parse_squash_commits = true
 ignore_merge_commits = true

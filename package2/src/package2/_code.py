@@ -1,11 +1,10 @@
 # _code.py
-import package1
 import numpy as np
 
-__all__ = ["cos"]  # Only 'sin' is accessible when using `from package1 import *`
+__all__ = ["tan"]
 
 
-def cos(x):
+def tan(x):
     """
     Summary of the function.
 
@@ -17,6 +16,6 @@ def cos(x):
     Returns
     -------
     float
-        The ``cos`` of x.
+        The ``tan`` of x.
     """
-    return package1.sin(x + np.pi / 2)
+    return np.tan(x)
