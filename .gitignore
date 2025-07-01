@@ -13,3 +13,6 @@ docs/.jupyterlite.doit.db
 package1/dist/
 package2/dist/
 __pycache__
+
+# testing
+.coverage

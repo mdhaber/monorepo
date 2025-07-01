@@ -36,6 +36,7 @@ flit = ">=3.11.0,<4"
 keyring = ">=25.6.0,<26"
 myst-parser = ">=4.0.1,<5"
 python-semantic-release = ">=10.2.0,<11"
+pytest-cov = ">=6.2.1,<7"
 
 [pypi-dependencies]
 monorepo-package1 = { path = "./package1/", editable = true }
