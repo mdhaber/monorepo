@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.2 (2025-06-30)
+
+### Bug Fixes
+
+- Fix __version__
+  ([`dd376b5`](https://github.com/mdhaber/monorepo/commit/dd376b5f54106d413ea0c97f08e833e3239d655e))
+
+
 ## v0.1.1 (2025-06-30)
 
 ### Bug Fixes
