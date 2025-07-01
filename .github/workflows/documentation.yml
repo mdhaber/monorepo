@@ -40,6 +40,16 @@ jobs:
         run: |
           pixi run sphinx-build docs _build
 
+      - name: Build dev wheels
+        run: |
+          for pkg in package1 package2; do
+            cd $pkg
+            pixi run flit build --format=wheel
+            mkdir -p ../_build/dev/$pkg
+            cp dist/*.whl ../_build/dev/$pkg/
+            cd ..
+          done
+ 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
