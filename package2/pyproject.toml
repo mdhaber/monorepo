@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "monorepo_package2"
-version = "1.0.0"
+version = "0.1.0"
 authors = [{ name = "Matt Haberland", email = "matt.haberland@gmail.com" }]
 description = "Short description here"
 license = { text = "MIT" }
@@ -97,7 +97,8 @@ default = "semantic-release <semantic-release>"
 
 [tool.semantic_release.commit_parser_options]
 minor_tags = ['package2-feat']
-allowed_tags = ['package2-feat']
+patch_tags = ['package2-fix', 'package2-perf']
+allowed_tags = ['package2-feat', 'package2-fix', 'package2-perf']
 default_bump_level = 0
 parse_squash_commits = true
 ignore_merge_commits = true
