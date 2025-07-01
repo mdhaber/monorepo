@@ -8,4 +8,4 @@ This module contains the following functions:
 .. autosummary::
    :toctree: generated/
 
-   cos
+   tan

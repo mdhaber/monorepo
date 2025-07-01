@@ -38,4 +38,3 @@ templates_path = ["_templates"]
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 global_enable_try_examples = True
-try_examples_global_height = "400px"

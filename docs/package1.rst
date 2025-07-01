@@ -11,4 +11,5 @@ This module contains the following functions:
    :toctree: generated/
 
    sin
+   cos
    
