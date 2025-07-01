@@ -47,7 +47,11 @@ jobs:
             pixi run flit build --format=wheel
             mkdir -p ../_build/dev/$pkg
             cp dist/*.whl ../_build/dev/$pkg/
-            cd ..
+
+            # Create index.html with <a href="..."> links to wheels
+            cd ../_build/dev/$pkg
+            ls *.whl | awk '{ print "<a href=\"" $1 "\">" $1 "</a><br>" }' > index.html
+            cd ../../../
           done
  
       - name: Upload Pages artifact
