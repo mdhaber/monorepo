@@ -96,10 +96,8 @@ env = "GIT_COMMIT_AUTHOR"
 default = "semantic-release <semantic-release>"
 
 [tool.semantic_release.commit_parser_options]
-minor_tags = ["feat(package1)"]
-patch_tags = ["fix(package1)", "perf(package1)"]
-other_allowed_tags = ["build(package1)", "chore(package1)", "ci(package1)", "docs(package1)", "style(package1)", "refactor(package1)", "test(package1)"]
-allowed_tags = ["feat(package1)", "fix(package1)", "perf(package1)", "build(package1)", "chore(package1)", "ci(package1)", "docs(package1)", "style(package1)", "refactor(package1)", "test(package1)"]
+minor_tags = ["package1-feat"]
+patch_tags = ["package1-fix", "package1-perf"]
 default_bump_level = 0
 parse_squash_commits = true
 ignore_merge_commits = true
