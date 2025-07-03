@@ -16,3 +16,6 @@ __pycache__
 
 # testing
 .coverage
+
+# pycharm
+.idea
